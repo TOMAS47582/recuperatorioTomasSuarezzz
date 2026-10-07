@@ -1,8 +1,6 @@
 const { sql, getPool } = require("../config/db");
 
-// Los THROW del script SQL usan números 50000 en adelante (reglas de negocio):
-// 50002 = no existe -> 404. Las demás reglas de negocio (50003, 50008, 50011) -> 400.
-// Cualquier otro error es técnico -> 500 (lo resuelve el manejador de app.js).
+
 const obtenerNumeroError = (error) =>
   error.number ?? error.originalError?.info?.number ?? error.precedingErrors?.[0]?.number;
 

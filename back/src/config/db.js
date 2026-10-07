@@ -1,8 +1,6 @@
 const sql = require("mssql");
 
-// DB_SERVER puede ser un servidor común ("localhost") o una instancia con nombre
-// ("localhost\SQLEXPRESS"). Con instancia nombrada no se envía el puerto: el driver
-// lo averigua solo a través del servicio SQL Server Browser.
+
 const [servidor, instancia] = (process.env.DB_SERVER || "localhost").split("\\");
 
 const config = {

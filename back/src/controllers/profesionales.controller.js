@@ -1,6 +1,6 @@
 const { getPool } = require("../config/db");
 
-// GET /api/profesionales -> usp_ListarProfesionales
+
 const listarProfesionales = async (_req, res, next) => {
   try {
     const pool = await getPool();
