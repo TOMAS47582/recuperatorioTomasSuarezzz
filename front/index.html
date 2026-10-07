@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilo | Turnos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Peluquería “Estilo”</h1>
+    <p>Administración de turnos y pagos</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="titulo-formulario">
+      <h2 id="titulo-formulario">Nuevo turno</h2>
+      <form id="form-turno">
+        <label for="cliente">Cliente</label>
+        <input id="cliente" name="cliente" type="text" required>
+
+        <label for="profesional">Profesional</label>
+        <select id="profesional" name="idProfesional" required>
+          <option value="">Seleccione un profesional</option>
+        </select>
+
+        <label for="fecha">Fecha</label>
+        <input id="fecha" name="fecha" type="date" required>
+
+        <label for="hora">Hora</label>
+        <input id="hora" name="hora" type="time" required>
+
+        <button type="submit">Registrar turno</button>
+      </form>
+      <p id="mensaje" role="status" aria-live="polite"></p>
+    </section>
+
+    <section aria-labelledby="titulo-turnos">
+      <h2 id="titulo-turnos">Turnos</h2>
+      <div class="tabla-contenedor">
+        <table>
+          <thead><tr><th>Cliente</th><th>Profesional</th><th>Fecha</th><th>Hora</th><th>Estado</th><th>Acción</th></tr></thead>
+          <tbody id="lista-turnos">
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-recaudacion">
+      <h2 id="titulo-recaudacion">Recaudación por profesional</h2>
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th>Profesional</th>
+              <th>Turnos</th>
+              <th>Cobrado</th>
+              <th>Pendiente</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-recaudacion">
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+
